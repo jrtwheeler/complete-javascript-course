@@ -77,3 +77,12 @@ if (day === "thursday") {console.log("Record videos.")}
 if (day === "friday") {console.log("Yay Friday.")}
 if (day === "saturday") {console.log("Enjoy the weekend.")}
 if (day === "sunday") {console.log("Not a valid day.")}
+
+const age = 18;
+age >= 18 ? console.log('I like to drink wine') : 
+
+const bill = 275;
+
+bill >= 50 && bill <= 300 ? tip = bill * .15 : tip = bill * .2
+
+console.log(bill)
