@@ -35,8 +35,8 @@ let KoalaScore = calcAverage(65, 54, 49);
 let DolphinScore = calcAverage(44, 23, 71);
 
 function checkWinner (KoalaScore, DolphinScore) {
-    if (KoalaScore > DolphinScore) {console.log("Koalas win!")};
-    if (KoalaScore < DolphinScore) {console.log("Dolphins win!")};
+    if (KoalaScore > 2 * DolphinScore) {console.log("Koalas win!")};
+    if (KoalaScore < 2 * DolphinScore) {console.log("Dolphins win!")};
 };
 
 checkWinner (KoalaScore, DolphinScore);
