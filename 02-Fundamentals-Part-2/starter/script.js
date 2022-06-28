@@ -32,11 +32,17 @@ GOOD LUCK 😀
 const calcAverage = (scoreOne, scoreTwo, scoreThree) => (scoreOne + scoreTwo + scoreThree)/3;
 
 let KoalaScore = calcAverage(65, 54, 49);
-let DolphinScore = calcAverage(44, 23, 71);
+let DolphinScore = calcAverage(65, 54, 49);
 
 function checkWinner (KoalaScore, DolphinScore) {
-    if (KoalaScore > 2 * DolphinScore) {console.log("Koalas win!")};
-    if (KoalaScore < 2 * DolphinScore) {console.log("Dolphins win!")};
+    if (KoalaScore >= 2 * DolphinScore) {
+        console.log(`Koalas win by a score of ${KoalaScore} to ${DolphinScore}!`)
+    } else if (DolphinScore >= 2 * KoalaScore) {
+        console.log(`Dolphins win by a score of ${KoalaScore} 
+    to ${DolphinScore}!`)
+    } else {console.log("No winner!")}
 };
 
 checkWinner (KoalaScore, DolphinScore);
+checkWinner (200, 100);
+checkWinner (100, 200);
