@@ -29,20 +29,81 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 GOOD LUCK 😀
 */
 // const calcAverage = (a, b, c) => (a + b + c) / 3;
-const calcAverage = (scoreOne, scoreTwo, scoreThree) => (scoreOne + scoreTwo + scoreThree)/3;
+const calcAverage = (scoreOne, scoreTwo, scoreThree) =>
+  (scoreOne + scoreTwo + scoreThree) / 3;
 
 let KoalaScore = calcAverage(65, 54, 49);
 let DolphinScore = calcAverage(65, 54, 49);
 
-function checkWinner (KoalaScore, DolphinScore) {
-    if (KoalaScore >= 2 * DolphinScore) {
-        console.log(`Koalas win by a score of ${KoalaScore} to ${DolphinScore}!`)
-    } else if (DolphinScore >= 2 * KoalaScore) {
-        console.log(`Dolphins win by a score of ${KoalaScore} 
-    to ${DolphinScore}!`)
-    } else {console.log("No winner!")}
+function checkWinner(KoalaScore, DolphinScore) {
+  if (KoalaScore >= 2 * DolphinScore) {
+    console.log(`Koalas win by a score of ${KoalaScore} to ${DolphinScore}!`);
+  } else if (DolphinScore >= 2 * KoalaScore) {
+    console.log(`Dolphins win by a score of ${KoalaScore} 
+    to ${DolphinScore}!`);
+  } else {
+    console.log("No winner!");
+  }
+}
+
+checkWinner(KoalaScore, DolphinScore);
+checkWinner(200, 100);
+checkWinner(100, 200);
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+/*
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! 
+Remember: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter)
+
+1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method.
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+
+GOOD LUCK 😀
+*/
+
+const Mark = {
+  full_name: "Mark Miller",
+  mass: "78",
+  height: "1.69",
+
+  calcBMI: function () {
+    this.bmi = Math.round(this.mass / this.height ** 2);
+    return this.bmi;
+  },
 };
 
-checkWinner (KoalaScore, DolphinScore);
-checkWinner (200, 100);
-checkWinner (100, 200);
+const John = {
+  full_name: "John Smith",
+  mass: "92",
+  height: "1.95",
+
+  calcBMI: function () {
+    this.bmi = Math.round(this.mass / this.height ** 2);
+    return this.bmi;
+  },
+};
+
+if (Mark.calcBMI() > John.calcBMI()) {
+  console.log(
+    `${Mark.full_name} has a higher bmi than ${
+      John.full_name
+    }. It is ${Mark.calcBMI()}. ${John.full_name}'s bmi is ${John.calcBMI()}`
+  );
+} else if (John.calcBMI() > Mark.calcBMI()) {
+  console.log(
+    `${John.full_name} has a higher bmi than ${
+      Mark.full_name
+    }. It is ${John.calcBMI()}. John's bmi is ${Mark.calcBMI()}`
+  );
+}
+
+const x = 23;
+
+const calcYear = (birthYear) => {
+  return 100;
+};
